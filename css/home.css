@@ -1,3 +1,4 @@
+
 .poppins-regular {
     font-family: "Poppins", serif;
     font-weight: 400;
@@ -7,17 +8,23 @@
 body{
     font-family: "Poppins";
     font-style: normal;
-    margin: 0%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    margin: 0;
 }
 .parte1{
     background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("/img/FUNDO.png");
     background-size: cover;
-    backdrop-filter: 10;
+    padding-bottom: 4rem;
 }
 .parte2{
+    padding-top: 1rem;
     background-image: url("/img/FUNDO2.png");
     background-size: cover;
-    backdrop-filter: 10;
+    margin: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -66,13 +73,20 @@ header{
     background-color: #9F9F9F;
     border-radius: 30px;
     margin: auto;
-
+}
+.card1 h1{
+    font-size: 3vw;
+    border-bottom: 0.5rem solid ;
+    padding-inline: 2rem;
 }
 .texto1{
     background-color: #9F9F9F;
     border-radius: 30px;
     margin: auto;
     padding: 15px;
+}.texto1 p{
+    font-weight: bold;
+    font-size: 1.5vw;
 }
 .card-button{
     display: flex;
@@ -97,6 +111,7 @@ header{
     justify-content: space-between;
     margin: 50px;
     padding: 10px;
+    padding-top: 4rem;
 }
 .titles{
     display: flex;
@@ -163,6 +178,10 @@ header{
     align-items: center;
     margin: 30px;
     padding: auto;
+    transition: 500ms;
+}
+.card:hover{
+    scale: 1.1;
 }
 h1{
     font-size: 40px;
