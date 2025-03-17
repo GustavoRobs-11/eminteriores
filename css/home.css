@@ -34,7 +34,6 @@ body{
 header{
     background-color: #D9D9D9;
     opacity: 53%;
-    border-radius: 100px;
     display: flex;
     justify-content: space-evenly;
     align-items:center;
@@ -75,6 +74,24 @@ header{
     margin: auto;
     padding: 15px;
 }
+.card-button{
+    display: flex;
+    background: rgb(5, 184, 20);
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+.logo-wpp{
+    width: 4rem;
+}
+.button-card{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
 .somos{
     display: flex;
     justify-content: space-between;
@@ -87,13 +104,12 @@ header{
     align-items: center;
     gap: 20px;
     color: #294574;
-    font-size: 20px;
 }
 .botoes-nav{
     border: none;
     color: #294574;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 2rem;
     background-color: transparent;
     
 }
@@ -157,6 +173,7 @@ h3{
     align-items: center;
     text-align: center;
     font-size: 25px;
+    height: 152px;
 }
 h6{
     font-size: 15px;
