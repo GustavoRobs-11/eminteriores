@@ -1,0 +1,230 @@
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+body{
+    font-family: "Poppins";
+    font-style: normal;
+    margin: 0%;
+}
+.parte1{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("/img/FUNDO.png");
+    background-size: cover;
+    backdrop-filter: 10;
+}
+.parte2{
+    background-image: url("/img/FUNDO2.png");
+    background-size: cover;
+    backdrop-filter: 10;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.logo{
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    margin: 10px;
+    cursor: pointer;
+}
+
+header{
+    background-color: #D9D9D9;
+    opacity: 53%;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    height: 120px;
+    
+}
+.btn {
+    background-color: #294574; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+  .btn:hover {
+    background-color: #345691;
+  }
+.duda{
+    width: 500px;
+    height: 500px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.card1{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #9F9F9F;
+    border-radius: 30px;
+    margin: auto;
+
+}
+.texto1{
+    background-color: #9F9F9F;
+    border-radius: 30px;
+    margin: auto;
+    padding: 15px;
+}
+.somos{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+    padding: 10px;
+}
+.titles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: #294574;
+    font-size: 20px;
+}
+.botoes-nav{
+    border: none;
+    color: #294574;
+    font-weight: bold;
+    font-size: 32px;
+    background-color: transparent;
+    
+}
+.container-ambientes{         /* Define a largura da div */
+    height: 300px;        /* Define uma altura fixa para a div */
+    display: flex;        /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza as imagens na horizontal */
+    align-items: center;
+    gap: 4px;
+}
+.ambiente{
+    width: 500px; 
+    height: max-content;
+    margin: 10px;
+    border-radius: 35px;
+    transition: width 0.5s;
+    object-fit: contain;
+    border-radius: 35px;
+    
+}
+.ambiente-low:hover{
+    width: 500px;
+    border-radius: 35px;
+}
+.ambiente-low{
+    width: 150px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+    transition: width 0.5s;
+    border: 2px solid black;
+}
+.planos{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 60px;
+    
+
+}
+.card{
+    background-color:rgb(0, 0, 0, 0.53);
+
+    width: 300px;
+    height: 580px;
+    border-radius: 35px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin: 30px;
+    padding: auto;
+}
+h1{
+    font-size: 40px;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+}
+h6{
+    font-size: 15px;
+    text-align: center;
+}
+.itens{
+    display: flex;
+    font-display: flex;
+    font-size: 10px;
+    flex-wrap: wrap;
+    width: 270px;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+.botoes-itens{
+    background-color: #294574;
+    padding: 5px;
+    border-radius: 30px;
+}
+.etapas{
+    text-align: center;
+    font-size: 35px;
+    color: #294574;
+}
+.container-etapas{
+    display: flex;
+    border-radius: 35px;
+    padding: 2%;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: auto;
+    gap: 10px;
+    background-color: rgb(0, 0, 0, 0.50);
+}
+.texto-etapas{
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border-radius: 35px;
+    background-color: white;
+    width: 50%;
+    
+    
+
+}
+.imagens-etapas{
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 35px;
+}
+.img-etapas{
+    border-radius: 35px;
+    width: 300px;
+}
+.texto-passos{
+    font-size: 40px;
+}
+.carrosel{
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    margin: auto;
+}
+.botoes-carrosel{
+    display: flex;
+    justify-content: space-between;
+}
