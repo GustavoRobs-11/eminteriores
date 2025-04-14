@@ -76,7 +76,7 @@ header{
 }
 .card-section1 h1{
     font-size: 3vw;
-    border-bottom: 0.5rem solid ;
+    border-bottom: 3px solid ;
     padding-inline: 2rem;
 }
 .texto-section1{
@@ -93,6 +93,7 @@ header{
 }
 .logo-wpp{
     width: 4rem;
+    height: 4rem;
 }
 .card-button{
     display: flex;
@@ -100,6 +101,7 @@ header{
     margin: 1rem;
     border-radius: 1rem;
     padding: 0.5rem;
+    align-items: center;
 }
 .button-card{
     background: none;
@@ -135,7 +137,6 @@ header{
     align-items: center;
     gap: 4px;
     width: 100%;
-    height: 100%;
     height: 400px;
 }
 .ambiente{
@@ -150,33 +151,35 @@ header{
     height: 400px;
 }
 .ambiente-low{
+    margin: 10px;
     width: 300px; 
     height: 300px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.5s;    
+    transition: 0.5s;  
+    flex-wrap: wrap;  
 }
 .planos{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding-top: 60px;
+    width: 100%;
+
 }
 .card{
     background-image: url("/img/COR_AMADERADO.webp");
     width: 300px;
-    height: 580px;
+    height: 650px;
     border-radius: 35px;
     display: flex;
     flex-direction:column;
     align-items: center;
-    margin: 30px;
-    padding: auto;
     transition: 500ms;
 }
 .card:hover{
-    scale: 1.1;
+    scale: 1.05;
 }
 .card h1{
     font-size: 40px;
@@ -198,7 +201,6 @@ header{
     font-display: flex;
     font-size: 10px;
     flex-wrap: wrap;
-    width: 270px;
     flex-direction: row;
     gap: 10px;
     justify-content: center;
@@ -219,7 +221,7 @@ header{
     padding-top: 2rem;
 }
 .copy-footer p{
-    font-family: var(--font-family);
+    font-family: "Poppins";
     color: var(--primary-color);
     font-size: 1rem;
     font-weight: bold;
@@ -236,9 +238,222 @@ header{
     justify-content: space-around;
 }
 .link-footer{
-    font-family: var(--font-family);
+    font-family: "Poppins";
     color: black;
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
+}
+
+@media (min-width: 0px){
+    .logo-header{
+        left: 5%;
+    }
+    .botoes-nav{
+        font-size: 0.7rem;
+    }
+    .container-section1{
+        flex-direction: column;
+    }
+    .card-section1{
+        width: 90%;
+    }
+    .card-section1 h1{
+        font-size: 5vw;
+    }
+    .texto-section1{
+        font-size: 3.5vw;
+    }
+    .card-button{
+        border-radius: 1rem;
+        padding: 0.2rem;
+    }
+    .logo-wpp{
+        width: 2em;
+        height: 2rem;
+    }
+    .button-card{
+        font-size: 1rem;
+    }
+    .fotoDuda-section1{
+        width: 90%;
+        height: 20%; 
+    }
+    /* section 2 */
+    .container-ambientes{
+        display: none;
+    }
+    .planos{
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    .card{
+        margin: auto;
+    }
+    .card h1{
+        font-size: 7vw;
+    }
+    .card h3{
+        font-size: 5vw;
+    }
+    .card h6{
+        font-size: 5vw;
+    }
+    .itens{
+        font-size: 3vw; 
+    }
+}
+@media (min-width: 768px){
+    .logo-header{
+        left: 5%;
+    }
+    .botoes-nav{
+        font-size: 1.2rem;
+    }
+    .container-section1{
+        flex-direction: column;
+    }
+    .card-section1{
+        width: 90%;
+    }
+    .card-section1 h1{
+        font-size: 3.5vw;
+    }
+    .texto-section1{
+        font-size: 2.5vw;
+    }
+    .card-button{
+        border-radius: 1rem;
+        padding: 0.2rem;
+    }
+    .logo-wpp{
+        width: 2em;
+        height: 2rem;
+    }
+    .button-card{
+        font-size: 1rem;
+    }
+    .fotoDuda-section1{
+        width: 50%;
+        height: 20%; 
+    }
+    /* section 2 */
+    .container-ambientes{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 15rem;
+    }
+    .ambiente{
+        width: 500px ;
+        height: 400px;
+    }
+    .ambiente-low{
+        width: 250px; 
+        height: 250px;
+    }
+    .ambiente-low:hover{
+        width: 400px ;
+        height: 400px;
+    }
+    .planos{
+        flex-direction: row;
+        width: 100%;
+        gap: 10px;
+    }
+    .card{
+        margin: 2px;
+        width: 30%;
+        height: 600px;
+    }
+    .card h1{
+        font-size: 3vw;
+    }
+    .card h3{
+        font-size: 2vw;
+    }
+    .card h6{
+        font-size: 1.5vw;
+    }
+    .itens{
+        font-size: 1.2vw; 
+        margin: 5px;
+    }
+}
+
+@media (min-width: 1024px){
+    .logo-header{
+        left: 5%;
+    }
+    .botoes-nav{
+        font-size: 1.5rem;
+    }
+    .container-section1{
+        flex-direction: row;
+    }
+    .card-section1{
+        width: 90%;
+    }
+    .card-section1 h1{
+        font-size: 3.5vw;
+    }
+    .texto-section1{
+        font-size: 2vw;
+    }
+    .card-button{
+        border-radius: 1rem;
+        padding: 0.2rem;
+    }
+    .logo-wpp{
+        width: 2em;
+        height: 2rem;
+    }
+    .button-card{
+        font-size: 1rem;
+    }
+    .fotoDuda-section1{
+        width: 35%;
+        height: 20%; 
+    }
+    /* section 2 */
+    .container-ambientes{
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 15rem;
+    }
+    .ambiente{
+        width: 600px ;
+        height: 400px;
+    }
+    .ambiente-low{
+        width: 250px; 
+        height: 250px;
+    }
+    .ambiente-low:hover{
+        width: 600px ;
+        height: 400px;
+    }
+    .planos{
+        flex-direction: row;
+        width: 100%;
+        gap: 10px;
+    }
+    .card{
+        margin: 2px;
+        width: 30%;
+        height: 580px;
+    }
+    .card h1{
+        font-size: 3vw;
+    }
+    .card h3{
+        font-size: 1.5vw;
+    }
+    .card h6{
+        font-size: 1.3vw;
+    }
+    .itens{
+        font-size: 1vw; 
+        margin: 5px;
+    }
 }
