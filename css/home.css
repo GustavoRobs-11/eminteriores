@@ -1,10 +1,3 @@
-
-.poppins-regular {
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
 body{
     font-family: "Poppins";
     font-style: normal;
@@ -15,88 +8,98 @@ body{
 main{
     margin: 0;
 }
-.parte1{
-    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("/img/FUNDO.png");
-    background-size: cover;
-    padding-bottom: 4rem;
-}
-.parte2{
-    padding-top: 1rem;
-    background-image: url("/img/FUNDO2.png");
-    background-size: cover;
-    margin: 0;
+header{
+    opacity: 100%;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    justify-content: end;
+    align-items:center;
+    background-image: url("/img/FUNDO2.png");
+    width: 100%;
+    height: 100px;
+    gap: 3rem;
+    margin: 0;
 }
-.logo{
-    width: 130px;
-    height: 130px;
+.logo-header{
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
     margin: 10px;
     cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50% 0%);
 }
-
-header{
-    background-color: #D9D9D9;
-    opacity: 53%;
+.container-nav{
     display: flex;
-    justify-content: space-evenly;
-    align-items:center;
-    height: 120px;
-    
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-right: 1rem;
 }
-.btn {
-    background-color: #294574; /* Blue background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
-  }
-  .btn:hover {
-    background-color: #345691;
-  }
-.duda{
-    width: 500px;
-    height: 500px;
+.botoes-nav{
+    border: none;
+    color: #294574;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: transparent;
+    transition: 500ms;
+}
+.botoes-nav:hover{
+    translate: 0px -10px;
     cursor: pointer;
-    margin: 20px;
+    border-bottom: 2px solid #294574;
 }
-
-.card1{
+/* .poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+} */
+.section1{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("/img/FUNDO.png");
+    background-size: cover;
+    padding-bottom: 4rem;    
+}
+.container-section1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-section1{
     display: flex;
     justify-items: center;
     align-items: center;
     flex-direction: column;
-    background-color: #9F9F9F;
+    background-image: url("/img/COR_AMADERADO.webp");
     border-radius: 30px;
-    margin: auto;
+    margin: 2rem;
+    width: 60%;
 }
-.card1 h1{
+.card-section1 h1{
     font-size: 3vw;
     border-bottom: 0.5rem solid ;
     padding-inline: 2rem;
 }
-.texto1{
-    background-color: #9F9F9F;
-    border-radius: 30px;
-    margin: auto;
-    padding: 15px;
-}.texto1 p{
+.texto-section1{
+    margin-inline: 1rem;
     font-weight: bold;
-    font-size: 1.5vw;
-}
-.card-button{
+    font-size: 1.8vw;
     display: flex;
-    background: rgb(5, 184, 20);
-    margin: 1rem;
-    border-radius: 1rem;
-    padding: 0.5rem;
+    justify-content: center;
+    flex-direction: column;
+}
+.texto-section1 p{
+    text-align: center;
+    margin: 0;
 }
 .logo-wpp{
     width: 4rem;
+}
+.card-button{
+    display: flex;
+    background: #29A71A;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
 }
 .button-card{
     background: none;
@@ -106,70 +109,62 @@ header{
     font-weight: bold;
     font-size: 1.5rem;
 }
-.somos{
-    display: flex;
-    justify-content: space-between;
-    margin: 50px;
-    padding: 10px;
-    padding-top: 4rem;
+.fotoDuda-section1{
+    width: 30%;
+    height: 20%;
+    cursor: pointer;
+    margin: 20px;
+    filter: drop-shadow(30px 0px 20px);
+    filter: contrast(1.2);
 }
-.titles{
+.section2{
+    padding-top: 1rem;
+    background-image: url("/img/marmore\ claro.jpg");
+    background-size: cover;
+    margin: 0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
-    color: #294574;
+    padding-bottom: 2rem;
 }
-.botoes-nav{
-    border: none;
-    color: #294574;
-    font-weight: bold;
-    font-size: 2rem;
-    background-color: transparent;
-    
-}
-.container-ambientes{         /* Define a largura da div */
-    height: 300px;        /* Define uma altura fixa para a div */
-    display: flex;        /* Usa flexbox para centralizar o conteúdo */
-    justify-content: center; /* Centraliza as imagens na horizontal */
+.container-ambientes{  
+    padding-top: 1rem;  
+    display: flex;
+    justify-content: center; 
     align-items: center;
     gap: 4px;
+    width: 100%;
+    height: 100%;
+    height: 400px;
 }
 .ambiente{
-    width: 500px; 
-    height: max-content;
+    width: 600px; 
+    height: 400px;
     margin: 10px;
-    border-radius: 35px;
-    transition: width 0.5s;
+    transition: 0.5s;
     object-fit: contain;
-    border-radius: 35px;
-    
 }
 .ambiente-low:hover{
-    width: 500px;
-    border-radius: 35px;
+    width: 600px; 
+    height: 400px;
 }
 .ambiente-low{
-    width: 150px;
+    width: 300px; 
     height: 300px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 35px;
-    transition: width 0.5s;
-    border: 2px solid black;
+    transition: 0.5s;    
 }
 .planos{
     display: flex;
     justify-content: space-around;
     padding-top: 60px;
-    
-
 }
 .card{
-    background-color:rgb(0, 0, 0, 0.53);
-
+    background-image: url("/img/COR_AMADERADO.webp");
     width: 300px;
     height: 580px;
     border-radius: 35px;
@@ -183,10 +178,10 @@ header{
 .card:hover{
     scale: 1.1;
 }
-h1{
+.card h1{
     font-size: 40px;
 }
-h3{
+.card h3{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,7 +189,7 @@ h3{
     font-size: 25px;
     height: 152px;
 }
-h6{
+.card h6{
     font-size: 15px;
     text-align: center;
 }
@@ -209,58 +204,41 @@ h6{
     justify-content: center;
 }
 .botoes-itens{
-    background-color: #294574;
+    background-color: #FEFFFD;
     padding: 5px;
-    border-radius: 30px;
+    border-radius: 5px;
 }
-.etapas{
-    text-align: center;
-    font-size: 35px;
-    color: #294574;
-}
-.container-etapas{
-    display: flex;
-    border-radius: 35px;
-    padding: 2%;
-    justify-content: space-around;
-    flex-direction: column;
-    margin: auto;
-    gap: 10px;
-    background-color: rgb(0, 0, 0, 0.50);
-}
-.texto-etapas{
-    padding: 15px;
-    text-align: center;
+/* .container-footer{
+    padding-top: 2rem;
+} */
+.copy-footer{
+    background-image: url("/img/COR_AMADERADO.webp");
     display: flex;
     flex-direction: column;
-    margin: 0;
-    border-radius: 35px;
-    background-color: white;
-    width: 50%;
+    align-items: center;
+    padding-top: 2rem;
+}
+.copy-footer p{
+    font-family: var(--font-family);
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: solid 1px var(--primary-color);
+    padding-inline: 10rem;
     
-    
-
 }
-.imagens-etapas{
-    background-color: white;
-    padding: 15px;
-    text-align: center;
-    border-radius: 35px;
-}
-.img-etapas{
-    border-radius: 35px;
-    width: 300px;
-}
-.texto-passos{
-    font-size: 40px;
-}
-.carrosel{
+.links-footer{
+    background: var(--details-color);
+    padding-top:1rem ;
+    padding-bottom: 1rem;
     display: flex;
-    gap: 20px;
+    width: 100%;
     justify-content: space-around;
-    margin: auto;
 }
-.botoes-carrosel{
-    display: flex;
-    justify-content: space-between;
+.link-footer{
+    font-family: var(--font-family);
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
 }

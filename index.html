@@ -9,34 +9,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="parte1">
+    <main>
     <header>
-        <div class="titles">
+        <img src="/img/logo.azul.png" alt="logo" class="logo-header">
+        <div class="container-nav">
         <button class="botoes-nav">Planos</button>
         <button class="botoes-nav">Projetos</button>
-        <button class="botoes-nav">contato</button>
+        <button class="botoes-nav">Contato</button>
         </div>
-        <img src="/img/logo.azul.png" alt="logo" class="logo">
-        <button class="botoes-nav">Login</button>
+        <!-- <button class="botoes-nav">Login</button> -->
     </header>
-    
-    <main>
-        <div class="somos">
-            <div class="card1">
+    <section class="section1">
+        <div class="container-section1">
+            <div class="card-section1">
                 <h1>QUEM SOU EU</h1>
-            
-            <div class="texto1">
-                <p>Olá, sou Eduarda Silva, designer de interiores e fundadora da E.M. Interiores. Meu objetivo é transformar seu sonho em realidade, unindo funcionalidade e beleza. Desde criança, sempre fui criativa, e hoje busco constante evolução pessoal e profissional. Amo explorar novas culturas, passar tempo com minha família e cuidar dos meus pets. Acredito no impacto positivo que um bom projeto de interiores pode trazer. Vamos juntos?</p>
+                <div class="texto-section1">
+                    <p>Olá, sou Eduarda Silva, designer de interiores e fundadora da E.M. Interiores. Meu objetivo é transformar seu sonho em realidade, unindo funcionalidade e beleza.</p>
+                    <p>Desde criança, sempre fui criativa, e hoje busco constante evolução pessoal e profissional. Amo explorar novas culturas, passar tempo com minha família e cuidar dos meus pets</p>
+                    <p>Acredito no impacto positivo que um bom projeto de interiores pode trazer. Vamos juntos?</p>
+                </div>
+                <div class="card-button" onclick="WPP()">
+                    <img src="/img/LOGO-WPP.png" class="logo-wpp">
+                    <button class="button-card">FALE COMIGO</button>
+                </div>
             </div>
-            <div class="card-button" onclick="WPP()">
-                <img src="/img/LOGO-WPP.png" class="logo-wpp">
-                <button class="button-card">CLIQUE AQUI E FALE COMIGO</button>
-            </div>
-            </div>
-        <img src="/img/img-duda.png" alt="duda" class="duda">
+        <img src="/img/img-duda.png" alt="duda" class="fotoDuda-section1">
         </div>
     </section>
-    <section class="parte2">
+    <section class="section2">
         <div class="container-ambientes">
             <div class="ambiente-low">
                 <img src="/img/CENA1.png" class="ambiente">
@@ -104,18 +104,21 @@
         </div>
         
     </section>
-    </main>
-
-
-
-
-
-
-
-
     <footer>
-
+        <footer class="container-footer">
+            <div class="copy-footer">
+                <nav class="links-footer" id="links-footer">
+                    <a href="#header" class="link-footer">Planos</a>
+                    <a href="#cards-container" class="link-footer">Projetos</a>
+                    <a href="#container-contato" class="link-footer">Contato</a>
+                </nav>
+                <p>© 2025 E.M. Interiores</p>
+                <div class="links">
+                </div>
+            </div>
+        </footer>
     </footer>
+    </main>
     <script src="/js/index.js"></script>
 </body>
 </html>
