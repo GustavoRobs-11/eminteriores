@@ -1,0 +1,240 @@
+@font-face {
+    font-family: font1;
+    src: url(/font/Dream-Avenue.ttf);
+}
+@font-face {
+    font-family: font2;
+    src: url();
+}
+:root{
+    --color1-color: #294574;
+    --color2-color: #ffffff;
+    --color3-color: #d4c3bb;
+}
+body{
+    font-family: font1;
+    font-style: normal;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    margin: 0;
+}
+header{
+    opacity: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    background: var(--color1-color);
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    flex-direction: row;
+}
+.cont-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 5px;
+}
+.logo-cont-header{
+
+}
+.logo-header{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin: 10px;
+    cursor: pointer;
+}
+.container-nav-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-right: 1rem;
+}
+.botoes-nav{
+    border: none;
+    color: var(--color2-color);
+    font-family: font1;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: transparent;
+    transition: 500ms;
+}
+.botoes-nav:hover{
+    translate: 0px -10px;
+    cursor: pointer;
+    border-bottom: 2px solid #294574;
+}
+.cont-redes-header{
+    display: flex;
+    gap: 50px;
+}
+.icons-redes-cont-header{
+    width: 22px;
+    filter:invert();
+}
+.icons-redes-cont-header:hover{
+    scale: 1.2;
+    cursor: pointer;
+}
+/* .poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+} */
+.section1{
+    background: var(--color3-color);
+}
+.container-section1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fundo_home{
+    margin-top: 0;
+    width: 100%;
+    filter: contrast(1.2);
+}
+.card-section1{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--color1-color);
+    border-radius: 30px;
+    color: var(--color2-color);
+    width: 80%;
+    margin-top: 2rem;
+}
+.card-section1 h1{
+    font-size: 1.7vw;
+    padding-inline: 2rem;
+}
+.texto-section1{
+    margin-inline: 1rem;
+    font-weight: bold;
+    font-size: 1.4vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.texto-section1 h1{
+    text-align: center;
+}
+.texto-section1 p{
+    text-align: center;
+    margin: 0;
+}
+.logo-wpp{
+    width: 4rem;
+    height: 4rem;
+}
+.card-button{
+    display: flex;
+    background: #29A71A;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    align-items: center;
+}
+.button-card{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.fotoDuda-section1{
+    width: 30%;
+    height: 20%;
+    cursor: pointer;
+    margin: 20px;
+    filter: drop-shadow(30px 0px 20px);
+    filter: contrast(1.2);
+}
+.section2{
+    padding-top: 1rem;
+    background: var(--color3-color);
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+.container-ambientes{  
+    padding-top: 1rem;  
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    width: 100%;
+}
+.ambiente{
+    width: 650px; 
+    height: 650px;
+    margin: 10px;
+    transition: 0.5s;
+    object-fit: contain;
+}
+.ambiente-low:hover{
+    width: 650px; 
+    height: 650px;
+}
+.ambiente-low{
+    margin: 10px;
+    width: 400px; 
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;  
+    flex-wrap: wrap;  
+}
+
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: var(--color1-color);
+    color: var(--color2-color);
+}
+.container-projetos-footer{
+    display: flex;
+    justify-content: center;   
+    gap: 8px; 
+}
+.img-footer{
+    width: 120px;
+    height: 120px;
+}
+.redes-sociais-footer{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.icons-redes-footer{
+    width: 22px;
+    filter: invert();
+}
+.icons-redes-footer:hover{
+    scale: 1.2;
+    cursor: pointer;
+}
+.copyright-footer{
+    display: flex;
+    justify-content: center;
+}
