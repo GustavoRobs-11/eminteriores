@@ -1,0 +1,194 @@
+@font-face {
+    font-family: font1;
+    src: url(/font/Dream-Avenue.ttf);
+}
+@font-face {
+    font-family: font2;
+    src: url();
+}
+:root{
+    --color1-color: #294574;
+    --color2-color: #ffffff;
+    --color3-color: #d4c3bb;
+}
+body{
+    font-family: font1;
+    font-style: normal;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--color3-color);
+}
+main{
+    margin: 0;
+}
+header{
+    opacity: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    background: var(--color1-color);
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    flex-direction: row;
+}
+.cont-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 5px;
+}
+.logo-cont-header{
+
+}
+.logo-header{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin: 10px;
+    cursor: pointer;
+}
+.container-nav-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-right: 1rem;
+}
+.botoes-nav{
+    border: none;
+    color: var(--color2-color);
+    font-family: font1;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: transparent;
+    transition: 500ms;
+}
+.botoes-nav:hover{
+    translate: 0px -10px;
+    cursor: pointer;
+    border-bottom: 2px solid #294574;
+}
+.cont-redes-header{
+    display: flex;
+    gap: 50px;
+}
+.icons-redes-cont-header{
+    width: 22px;
+    filter:invert();
+}
+.icons-redes-cont-header:hover{
+    scale: 1.2;
+    cursor: pointer;
+}
+
+.section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: min-content;
+}
+.card1{
+    align-self: flex-start;
+    background-color: #294474d5;
+    padding: 10px;
+    margin: 10px;
+    width: 30%;
+    border-radius: 35px;
+    font-size: 1.9vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--color2-color);
+    width: 30%;
+}
+.card1 li{
+    padding-bottom: 1rem;
+}
+.card2{
+    align-self: flex-end;
+    background-color: #294474d5;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 35px;
+    font-size: 1.4vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--color2-color);
+}
+.card2 li{
+    padding-bottom: 8px;
+}
+.fundo_sobre{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.section2{
+    display: flex;
+    flex-direction: row;
+    background: var(--color3-color);
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+.cont-img-section2{
+    width: 50%;
+}
+.img-section2{
+    width: 50%;
+}
+.comotrabalho-section2 h1{
+   font-size: 4vw;
+   text-align: center;
+   color: var(--color1-color);
+}
+.list-section2{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 35px;
+    font-size: 1.5vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #294574;
+}
+.list-section2 li{
+    padding-bottom: 2rem;
+}
+
+
+
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: var(--color1-color);
+    color: var(--color2-color);
+}
+.container-projetos-footer{
+    display: flex;
+    justify-content: center;   
+    gap: 8px; 
+}
+.img-footer{
+    width: 120px;
+    height: 120px;
+}
+.redes-sociais-footer{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.icons-redes-footer{
+    width: 22px;
+    filter: invert();
+}
+.icons-redes-footer:hover{
+    scale: 1.2;
+    cursor: pointer;
+}
+.copyright-footer{
+    display: flex;
+    justify-content: center;
+}
