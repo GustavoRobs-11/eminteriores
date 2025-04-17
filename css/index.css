@@ -69,8 +69,13 @@ header{
 .botoes-nav:hover{
     translate: 0px -10px;
     cursor: pointer;
-    border-bottom: 2px solid #294574;
+    border-bottom: 2px solid var(--color2-color);
+    
 }
+#home-header{
+    border-bottom: 2px solid var(--color2-color);
+}
+
 .cont-redes-header{
     display: flex;
     gap: 50px;
