@@ -1,0 +1,57 @@
+@font-face {
+    font-family: font1;
+    src: url(/font/Dream-Avenue.ttf);
+}
+@font-face {
+    font-family: font2;
+    src: url();
+}
+:root{
+    --color1-color: #294574;
+    --color2-color: #ffffff;
+    --color3-color: #d4c3bb;
+}
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: var(--color1-color);
+    color: var(--color2-color);
+    font-family: serif;
+}
+.container-projetos-footer{
+    display: flex;
+    justify-content: center;   
+    gap: 8px; 
+}
+.img-footer{
+    width: 120px;
+    height: 120px;
+}
+.redes-sociais-footer{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+.icons-redes-footer{
+    width: 22px;
+    filter: invert();
+}
+.icons-redes-footer:hover{
+    scale: 1.2;
+    cursor: pointer;
+}
+.copyright-footer{
+    display: flex;
+    justify-content: center;
+    font-family: serif;
+    font-size: 8px;
+}
+.copyright-footer h1{
+    border-bottom: 3px solid var(--color2-color);
+    padding-bottom: 10px;
+    padding-inline: 12rem;
+}

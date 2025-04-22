@@ -21,72 +21,9 @@ body{
 main{
     margin: 0;
 }
-header{
-    opacity: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items:center;
-    background: var(--color1-color);
-    width: 100%;
-    height: 100px;
-    margin: 0;
-    flex-direction: row;
-}
-.cont-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    margin: 5px;
-}
-.logo-cont-header{
-
-}
-.logo-header{
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    margin: 10px;
-    cursor: pointer;
-}
-.container-nav-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding-right: 1rem;
-}
-.botoes-nav{
-    border: none;
-    color: var(--color2-color);
-    font-family: font1;
-    font-weight: bold;
-    font-size: 1.2rem;
-    background-color: transparent;
-    transition: 500ms;
-}
-.botoes-nav:hover{
-    translate: 0px -10px;
-    cursor: pointer;
-    border-bottom: 2px solid var(--color2-color);
-    
-}
 #home-header{
     border-bottom: 2px solid var(--color2-color);
-}
-
-.cont-redes-header{
-    display: flex;
-    gap: 50px;
-}
-.icons-redes-cont-header{
-    width: 22px;
-    filter:invert();
-}
-.icons-redes-cont-header:hover{
-    scale: 1.2;
-    cursor: pointer;
+    translate: 0 -10px;
 }
 /* .poppins-regular {
     font-family: "Poppins", serif;
@@ -207,39 +144,3 @@ header{
     flex-wrap: wrap;  
 }
 
-.container-footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background: var(--color1-color);
-    color: var(--color2-color);
-}
-.container-projetos-footer{
-    display: flex;
-    justify-content: center;   
-    gap: 8px; 
-}
-.img-footer{
-    width: 120px;
-    height: 120px;
-}
-.redes-sociais-footer{
-    padding-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    
-}
-.icons-redes-footer{
-    width: 22px;
-    filter: invert();
-}
-.icons-redes-footer:hover{
-    scale: 1.2;
-    cursor: pointer;
-}
-.copyright-footer{
-    display: flex;
-    justify-content: center;
-}
