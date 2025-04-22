@@ -23,7 +23,6 @@ main{
 }
 #home-header{
     border-bottom: 2px solid var(--color2-color);
-    translate: 0 -10px;
 }
 /* .poppins-regular {
     font-family: "Poppins", serif;
