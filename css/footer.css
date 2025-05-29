@@ -12,6 +12,7 @@
     --color3-color: #d4c3bb;
 }
 .container-footer{
+    padding-inline: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,21 +21,23 @@
     color: var(--color2-color);
     font-family: serif;
 }
+.container-footer h1{
+    font-size: 1.5rem;
+}
 .container-projetos-footer{
     display: flex;
     justify-content: center;   
     gap: 8px; 
 }
 .img-footer{
-    width: 120px;
-    height: 120px;
+    width: 4rem;
+    height: 4rem;
 }
 .redes-sociais-footer{
     padding-top: 2rem;
     display: flex;
     justify-content: center;
     gap: 20px;
-    
 }
 .icons-redes-footer{
     width: 22px;
@@ -48,10 +51,9 @@
     display: flex;
     justify-content: center;
     font-family: serif;
-    font-size: 8px;
 }
 .copyright-footer h1{
     border-bottom: 3px solid var(--color2-color);
     padding-bottom: 10px;
-    padding-inline: 12rem;
+    font-size: 1.3rem;
 }
