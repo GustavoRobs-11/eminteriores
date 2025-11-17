@@ -1,0 +1,76 @@
+@import url("../../styles/main.css");
+
+
+.footer {
+  background: var(--color2);
+  color: var(--color1);
+  padding: 60px 40px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 80px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  width: 150px;
+}
+
+.footer-section h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-section a {
+  display: block;
+  color: var(--color1);
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 8px 0;
+  transition: 0.3s;
+}
+
+.footer-section a:hover {
+  opacity: 0.7;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.icon {
+  font-size: 1.6rem;
+  color: var(--color1);
+}
+
+/* COPYRIGHT E DESENVOLVEDOR */
+.footer-bottom {
+  border-top: 1px solid var(--color1);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  color: var(--color1);
+  font-size: 1rem;
+}
+
+.copyright-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dev-by {
+  font-weight: 600;
+}

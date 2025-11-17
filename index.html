@@ -1,106 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E.M Interiores</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <main>
-    <header>
-        <div class="cont-header">
-            <div class="logo-cont-header">
-                <img src="/img/logo_branca.png" alt="logo" class="logo-header">
-            </div>
-            <div class="cont-nav-header">
-                <button class="botoes-nav" onclick="Home()" id="home-header">Home</button>
-                <button class="botoes-nav" onclick="Sobre()">Sobre</button>
-                <button class="botoes-nav">Projetos</button>
-                <button class="botoes-nav">Contato</button>
-            </div>
-            <div class="cont-redes-header">
-                <img src="/img/whatsapp.png" alt="" class="icons-redes-cont-header" onclick="WPP()">
-                <img src="/img/instagram.png" alt="" class="icons-redes-cont-header" onclick="Insta()">
-                <img src="/img/tiktok.png" alt="" class="icons-redes-cont-header" onclick="Tiktok()">
-            </div>
-            <div class="cont-responsividade-header">
-                <button id="menu">
-                    <span class="bar1"></span>
-                    <span class="bar2"></span>
-                    <span class="bar3"></span>
-                </button>
-                <div class="cont-nav-responsividade-header">
-                    <button class="botoes-nav" onclick="Home()" id="home-header">Home</button>
-                    <button class="botoes-nav" onclick="Sobre()">Sobre</button>
-                    <button class="botoes-nav">Projetos</button>
-                    <button class="botoes-nav">Contato</button>
-                </div>
-            </div>
-        </div>
-    </header>
-    <section class="section1">
-        <div class="container-section1">
-            <img src="/img/foto-landing-page2.0.jpg" alt=""class="fundo_home">
-            <div class="card-section1">
-                <h1>Prazer, sou Eduarda Silva</h1>
-                <div class="texto-section1">
-                   <p>Designer de interiores e fundadora da EM Interiores. Transformo sonhos em espaços reais, funcionais, bonitos e cheios de personalidade. Criativa desde criança, trago minha paixão, experiências e amor pelo design em cada detalhe. Acredito que ambientes bem pensados mudam vidas.</p>
-                   <h1>Seu lar, um reflexo do seu viver!</h1> 
-                   <p>Vamos criar o seu juntos?</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section2">
-        <div class="container-ambientes">
-            <div class="ambiente-low">
-                <img src="/img/cena (1).jpg" class="ambiente">
-            </div>
-            <div class="ambiente-low">
-                <img src="/img/cena (1).png" class="ambiente">
-            </div>
-            <div class="ambiente-low">
-                <img src="/img/cena (2).jpg" class="ambiente">
-            </div>
-            <div class="ambiente-low">
-                <img src="/img/cena (2).png" class="ambiente">
-            </div>
-            <div class="ambiente-low">
-                <img src="/img/cena (3).jpg" class="ambiente">
-            </div>
-            <div class="ambiente-low">
-                <img src="/img/cena (3).png" class="ambiente">
-            </div>
-            <div class="ambiente-low">
-                <img src="/img/cena (4).png" class="ambiente">
-    </section>
-    <footer>
-        <div class="container-footer">
-            <h1>CONFIRA MAIS PROJETOS NAS REDES SOCIAIS @E.M.INTERIORES</h1>
-            <div class="container-projetos-footer">
-                <img src="/img/FotosFooter (1).png" alt="" class="img-footer">
-                <img src="/img/FotosFooter (2).png" alt="" class="img-footer">
-                <img src="/img/FotosFooter (3).png" alt="" class="img-footer">
-                <img src="/img/FotosFooter (4).png" alt="" class="img-footer">
-                <img src="/img/FotosFooter (5).png" alt="" class="img-footer">
-            </div>
-            <div class="redes-sociais-footer">
-                <img src="/img/whatsapp.png" alt="" class="icons-redes-footer" onclick="WPP()">
-                <img src="/img/instagram.png" alt="" class="icons-redes-footer" onclick="Insta()">
-                <img src="/img/tiktok.png" alt="" class="icons-redes-footer" onclick="Tiktok()">
-            </div>
-            <div class="copyright-footer">
-                <h1>Copyright © 2025 Eduarda Silva Prado | eminteriores.com.br</h1>
-            </div>
-        </div>
-    </footer>
-    </main>
-    <script src="/js/index.js"></script>
-    <script src="/js/header-responsi.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eminteriores</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
