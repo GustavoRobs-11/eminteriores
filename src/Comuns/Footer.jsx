@@ -13,31 +13,34 @@ export default function Footer() {
           <img src={logo} alt="Logo" />
         </div>
 
-        {/* NAVEGAÇÃO */}
-        <div className="footer-section">
-          <h3>Navegação</h3>
-          <a href="#como-funciona">Como Funciona</a>
-          <a href="#portfolio">Portfólio</a>
-          <a href="#contato">Contato</a>
-        </div>
-
-        {/* REDES SOCIAIS */}
-        <div className="footer-section">
-          <h3>Redes</h3>
-
-          <div className="social-item">
-            <FaInstagram className="icon" />
-            <a href="#">Instagram</a>
+        {/* BLOCOS: NAVEGAÇÃO + REDES */}
+        <div className="footer-blocks">
+          {/* NAVEGAÇÃO */}
+          <div className="footer-section">
+            <h3>Navegação</h3>
+            <a href="#como-funciona">Como Funciona</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contato">Contato</a>
           </div>
 
-          <div className="social-item">
-            <FaWhatsapp className="icon" />
-            <a href="#">WhatsApp</a>
-          </div>
+          {/* REDES SOCIAIS */}
+          <div className="footer-section">
+            <h3>Redes</h3>
 
-          <div className="social-item">
-            <FaTiktok className="icon" />
-            <a href="#">Tiktok</a>
+            <div className="social-item">
+              <FaInstagram className="icon" />
+              <a href="#">Instagram</a>
+            </div>
+
+            <div className="social-item">
+              <FaWhatsapp className="icon" />
+              <a href="#">WhatsApp</a>
+            </div>
+
+            <div className="social-item">
+              <FaTiktok className="icon" />
+              <a href="#">Tiktok</a>
+            </div>
           </div>
         </div>
 

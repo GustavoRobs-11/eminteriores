@@ -2,19 +2,21 @@ import { useEffect, useState } from "react";
 import "../styles/Comuns/NavBar.css";
 import logo from "../img/Logos/logoAzul.png";
 
+// Ícones
+import { HiMenu, HiX } from "react-icons/hi";
+
 export default function NavBar() {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
 
       if (currentScroll > lastScroll) {
-        // Descendo → esconde
-        setShowHeader(false);
+        setShowHeader(false); 
       } else {
-        // Subindo → mostra
         setShowHeader(true);
       }
 
@@ -33,10 +35,19 @@ export default function NavBar() {
           <img src={logo} alt="Logo" className="logo" />
         </div>
 
-        <nav className="nav-menu">
-          <a href="#como-funciona">Como Funciona</a>
-          <a href="#portfolio">Portfólio</a>
-          <a href="#contato">Contato</a>
+        {/* Botão Mobile com ícone */}
+        <button 
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <HiX size={30} /> : <HiMenu size={30} />}
+        </button>
+
+        {/* Menu */}
+        <nav className={`nav-menu ${menuOpen ? "open" : ""}`}>
+          <a href="#como-funciona" onClick={() => setMenuOpen(false)}>Como Funciona</a>
+          <a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfólio</a>
+          <a href="#contato" onClick={() => setMenuOpen(false)}>Contato</a>
         </nav>
 
       </div>

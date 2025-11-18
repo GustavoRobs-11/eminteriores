@@ -5,19 +5,21 @@
   background: var(--color2);
   color: var(--color1);
   padding: 60px 40px;
+  box-sizing: border-box;
 }
 
 .footer-top {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 80px;
+  gap: 40px;
   flex-wrap: wrap;
   margin-bottom: 30px;
 }
 
 .footer-logo img {
   width: 150px;
+  height: auto;
 }
 
 .footer-section h3 {
@@ -33,6 +35,24 @@
   text-decoration: none;
   margin: 8px 0;
   transition: 0.3s;
+}
+
+/* Agrupa navegação + redes em dois blocos lado a lado */
+.footer-blocks {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.footer-blocks .footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-section { /* garante que cada bloco tenha largura limitada */
+  width: 260px;
+  max-width: 40vw;
 }
 
 .footer-section a:hover {
@@ -73,4 +93,92 @@
 
 .dev-by {
   font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 50px 30px;
+  }
+
+  .footer-top {
+    gap: 40px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.45rem;
+  }
+
+  .footer-section a {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .footer-logo img {
+    width: 130px;
+  }
+
+  .footer-section {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+  }
+
+  .footer-section h3 {
+    font-size: 1.35rem;
+  }
+
+  .footer-section a {
+    font-size: 1.05rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-bottom p {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer {
+    padding: 30px 16px;
+  }
+
+  .footer-logo img {
+    width: 110px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.15rem;
+  }
+
+  .footer-section a {
+    font-size: 1rem;
+  }
+
+  .icon {
+    font-size: 1.4rem;
+  }
 }
