@@ -1,0 +1,95 @@
+@import url("../../styles/main.css");
+
+/* CONTAINER GERAL */
+.passos-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 12rem;
+    background-image: url("../../img/ComoFunciona/fundo.png");
+}
+
+/* BOTÕES NUMERADOS */
+.passos-indicadores {
+    display: flex;
+    gap: 10px;
+}
+
+.passo-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: var(--color2);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ÁREA PRINCIPAL */
+.passos-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    justify-content: space-evenly;
+}
+
+/* BOTÕES DE SETA */
+.passo-seta {
+    background: var(--color2);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CARD CENTRAL */
+.passo-card {
+    display: flex;
+    background: var(--color1);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid var(--color2);
+    border-radius: 25px;
+    margin: 5rem;
+}
+
+/* IMAGEM */
+.passo-imagem img {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXTO */
+.passo-info {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color2);
+    max-width: 300px;
+}
+
+.icone-lampada {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.passo-btn {
+    transition: transform 0.3s ease;
+}
+
+.passo-btn.ativo {
+    transform: scale(1.2);
+    background: var(--vasil-blue);
+}

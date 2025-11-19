@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/Comuns/NavBar.css";
 import logo from "../img/Logos/logoAzul.png";
+import { Link } from 'react-router-dom'
 
 // Ícones
 import { HiMenu, HiX } from "react-icons/hi";
@@ -15,7 +16,7 @@ export default function NavBar() {
       const currentScroll = window.scrollY;
 
       if (currentScroll > lastScroll) {
-        setShowHeader(false); 
+        setShowHeader(false);
       } else {
         setShowHeader(true);
       }
@@ -31,12 +32,15 @@ export default function NavBar() {
     <header className={showHeader ? "show" : "hide"}>
       <div className="header-content">
 
-        <div className="logo-area">
-          <img src={logo} alt="Logo" className="logo" />
-        </div>
+        <Link to='/'>
+          <div className="logo-area">
+            <img src={logo} alt="Logo" className="logo" />
+          </div>
+        </Link>
+
 
         {/* Botão Mobile com ícone */}
-        <button 
+        <button
           className="hamburger"
           onClick={() => setMenuOpen(!menuOpen)}
         >
@@ -45,9 +49,15 @@ export default function NavBar() {
 
         {/* Menu */}
         <nav className={`nav-menu ${menuOpen ? "open" : ""}`}>
-          <a href="#como-funciona" onClick={() => setMenuOpen(false)}>Como Funciona</a>
-          <a href="#portfolio" onClick={() => setMenuOpen(false)}>Portfólio</a>
-          <a href="#contato" onClick={() => setMenuOpen(false)}>Contato</a>
+          <Link to='/como-funciona'>
+            <a>Como Funciona</a>
+          </Link>
+          <Link to='/portfolio'>
+            <a>Portfólio</a>
+          </Link>
+          <Link to='/contato'>
+            <a>Contato</a>
+          </Link>
         </nav>
 
       </div>
