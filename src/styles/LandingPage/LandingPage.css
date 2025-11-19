@@ -12,7 +12,7 @@
 .hero-img {
   position: absolute;
   inset: 0;
-  
+
   width: 100%;
   min-height: 100%;
   max-height: 175%;
@@ -60,7 +60,8 @@
 /* Botão */
 .hero-cta {
   display: inline-block;
-  background: var(--color2); /* azul escuro */
+  background: var(--color2);
+  /* azul escuro */
   color: var(--color1);
   padding: 14px 28px;
   border-radius: 999px;
@@ -109,14 +110,23 @@
   border: 2px solid var(--color2);
   border-radius: 20px;
   padding: 2rem;
-  text-align: center;
   background: #fff;
-  box-shadow: 0px 3px 8px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.1s ease;
+  transform-style: preserve-3d;
 }
+
+.dif-card:hover {
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+.dif-grid {
+  perspective: 900px;
+  /* adiciona profundidade 3D */
+}
+
+
 
 .dif-icon {
   color: var(--color2);
@@ -135,23 +145,24 @@
   line-height: 1.4;
 }
 
-/* ======== HERO SOCIAL ======== */
+/* ======== HERO SOCIAL (Melhor Tipografia + Responsividade) ======== */
 
 .hero-social-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
-  padding: 4rem 2rem;
+  gap: 2rem;
+  padding: 2rem 1rem;
   background: url("../../img/LandingPage/fundo.png");
   background-size: cover;
   background-position: center;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 
 /* Imagem */
 .hero-social-image-wrapper {
-  max-width: 450px;
+  max-width: clamp(280px, 40vw, 520px);
   width: 100%;
 }
 
@@ -163,29 +174,40 @@
   display: block;
 }
 
-/* Conteúdo à direita */
+/* Conteúdo */
 .hero-social-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  max-width: 500px;
   gap: 2rem;
+}
+
+/* Texto com tipografia melhorada */
+.container-quemsou p {
+  font-size: clamp(1rem, 1.1vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--color2);
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.3px;
 }
 
 /* Botões */
 .hero-social-btn {
-  background: #1A2E55;
+  background: var(--color2);
   color: white;
   padding: 14px 32px;
   border-radius: 12px;
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
   transition: 0.3s;
 }
 
 .hero-social-btn:hover {
-  background: #24457d;
+  background: var(--color2Hover);
 }
 
 /* Ícones sociais */
@@ -196,12 +218,12 @@
 }
 
 .hero-icon {
-  width: 60px;
-  height: 60px;
-  background: #1A2E55;
+  width: clamp(45px, 5vw, 60px);
+  height: clamp(45px, 5vw, 60px);
+  background: var(--color2);
   color: white;
   border-radius: 50%;
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,56 +232,18 @@
 }
 
 .hero-icon:hover {
-  background: #24457d;
+  background: var(--color2Hover);
   transform: scale(1.05);
 }
 
-/* ======== RESPONSIVE ADJUSTMENTS ======== */
+/* RESPONSIVIDADE */
 
-/* Tablet and small laptops */
-@media (max-width: 1024px) {
-  .hero {
-    height: min(760px, 120vh);
-  }
 
-  .hero-img {
-    /* tablet: ajustar levemente para manter o rosto mais abaixo */
-    object-position: 75% 66%;
-  }
 
-  .hero-overlay {
-    justify-content: center;
-    padding-left: clamp(16px, 6vw, 80px);
-    padding-right: clamp(16px, 6vw, 40px);
-    align-items: center;
-  }
 
-  .hero-card {
-    max-width: 720px;
-    width: 95%;
-    padding: clamp(16px, 4vw, 28px);
-    border-radius: 16px;
-  }
+/* ======== RESPONSIVE ======== */
 
-  .hero-title {
-    font-size: clamp(24px, 5.2vw, 40px);
-    text-align: center;
-  }
 
-  .dif-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
-  .hero-social-section {
-    padding: 3rem 1rem;
-    gap: 2rem;
-  }
-
-  .hero-social-image-wrapper {
-    max-width: 380px;
-  }
-}
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -302,25 +286,21 @@
     padding: 1.25rem;
   }
 
-  .hero-social-section {
-    flex-direction: column;
-    padding: 2rem 1rem;
-    background-position: center;
-  }
-
-  .hero-social-image-wrapper {
-    max-width: 100%;
-    border-radius: 20px;
-  }
-
-  .hero-social-content {
-    align-items: center;
-  }
-
   .hero-icon {
     width: 48px;
     height: 48px;
     font-size: 1.3rem;
+  }
+
+  .hero-social-section {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-social-content {
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -371,20 +351,16 @@
     border-radius: 12px;
   }
 
-  .hero-social-section {
-    padding: 1.5rem 0.75rem;
-    gap: 1rem;
+  .hero-social-img {
+    border-radius: 28px;
   }
 
   .hero-social-btn {
-    font-size: 1rem;
-    padding: 10px 18px;
     width: 100%;
     text-align: center;
   }
 
-  .hero-icon {
-    width: 44px;
-    height: 44px;
+  .hero-social-icons {
+    gap: 1.2rem;
   }
 }

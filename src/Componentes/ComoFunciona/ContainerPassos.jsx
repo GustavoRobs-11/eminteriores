@@ -41,15 +41,15 @@ export default function ContainerPassos() {
 
     const steps = [
         { img: foto1, text: "Vou explicar a voces o processo de desenvolvimento dos nossos projetos de design de interiores!" },
-        { img: foto2, text: "Minha parte começa assim que seu projeto arquitetonico estiver pronto./n Vou precisar da planta com todas as medidas para começar!" },
-        { img: foto3, text: "Eu simplifico toda a planta, mantendo apenas as paredes, janelas e portas. /n Dessa forma, já tenho uma base para fazer anotações durante a reunião de briefing." },
+        { img: foto2, text: "Minha parte começa assim que seu projeto arquitetonico estiver pronto.\n Vou precisar da planta com todas as medidas para começar!" },
+        { img: foto3, text: "Eu simplifico toda a planta, mantendo apenas as paredes, janelas e portas. \n Dessa forma, já tenho uma base para fazer anotações durante a reunião de briefing." },
         { img: foto4, text: "Nessa reunião, vou compreender suas necessidades e elaborar um layout específico para o cotidiano da sua família..." },
         { img: foto5, text: "Agora, analiso todo o layout, buscando a melhor distribuiçã, sempre considerando a circulação e o aproveitamento do espaço." },
-        { img: foto6, text: "Com o layout definido, iniciarei a modelagem e criarei as imagens renderizadas. /n Após revisão de tudo, farei a tão esperada reunião para apresentar o projeto." },
+        { img: foto6, text: "Com o layout definido, iniciarei a modelagem e criarei as imagens renderizadas. \n Após revisão de tudo, farei a tão esperada reunião para apresentar o projeto." },
         { img: video, type: "video", text: "Além das imagens, crio um tour virtual para que o cliente possa ter uma melhor noção do ambiente." },
-        { img: foto8, text: "Após a aprovação das imagens, avançamos para o detalhamento, onde cada aspecto é específicado com precisão. /n Isso permite que o cliente elabore o projeto de acordo com as imagens que visualizou." },
-        { img: foto9, text: "Após concluir  o detalhamento, crio uma pasta no Drive na qual armazeno todos os arquivos, para que o cliente possa acessar os PDFs sempre que necessário /n Isso facilita o envio para terceiros." },
-        { img: foto10, text: "Essas são as etapas do projeto. /n Mesmo após a sua conclusão, permaneco em contato com o cliente para esclarecer possíveis dúvidas e auxiliar na reforma de forma online." },
+        { img: foto8, text: "Após a aprovação das imagens, avançamos para o detalhamento, onde cada aspecto é específicado com precisão. \n Isso permite que o cliente elabore o projeto de acordo com as imagens que visualizou." },
+        { img: foto9, text: "Após concluir  o detalhamento, crio uma pasta no Drive na qual armazeno todos os arquivos, para que o cliente possa acessar os PDFs sempre que necessário \n Isso facilita o envio para terceiros." },
+        { img: foto10, text: "Essas são as etapas do projeto. \n Mesmo após a sua conclusão, permaneco em contato com o cliente para esclarecer possíveis dúvidas e auxiliar na reforma de forma online." },
     ];
 
     const [currentStep, setCurrentStep] = useState(0);

@@ -1,5 +1,6 @@
 import "../styles/Comuns/Footer.css";
 import logo from "../img/Logos/logoBranca.png"; // coloque sua logo branca aqui
+import { Link } from 'react-router-dom'
 
 import { FaInstagram, FaWhatsapp, FaTiktok, FaRegCopyright } from "react-icons/fa";
 
@@ -9,9 +10,11 @@ export default function Footer() {
       <div className="footer-top">
 
         {/* LOGO */}
-        <div className="footer-logo">
-          <img src={logo} alt="Logo" />
-        </div>
+        <Link to='/'>
+          <div className="footer-logo">
+            <img src={logo} alt="Logo" />
+          </div>
+        </Link>
 
         {/* BLOCOS: NAVEGAÇÃO + REDES */}
         <div className="footer-blocks">

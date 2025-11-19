@@ -60,17 +60,45 @@ header.hide {
   gap: 60px;
 }
 
-.nav-menu a {
-  color: var(--color2);
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: 0.5px;
-  text-decoration: none;
-  transition: 0.25s ease-in-out;
+/* container NÃO TEM HOVER */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
-.nav-menu a:hover {
-  opacity: 0.6;
+
+/* links: modernos e clean */
+.button-nav {
+  position: relative;
+  color: var(--color2);
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 6px 8px;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* background diagonal suave */
+.button-nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color2);
+  opacity: 0;
+  border-radius: 6px;
+  transform: translate(-20%, 20%) scale(0.9);
+  transition: 0.30s ease-in-out;
+  z-index: -1;
+}
+
+/* hover */
+.button-nav:hover::before {
+  opacity: 0.12;
+  transform: translate(0, 0) scale(1);
+}
+
+.button-nav:hover {
   transform: translateY(-2px);
 }
 

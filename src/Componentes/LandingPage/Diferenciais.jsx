@@ -25,6 +25,25 @@ export default function Diferenciais() {
       text: "Planejo cada detalhe de acordo com sua disponibilidade financeira, sem perder qualidade.",
     },
   ];
+  const cards = document.querySelectorAll('.dif-card');
+
+cards.forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left; 
+    const y = e.clientY - rect.top;
+
+    const rotateX = ((y / rect.height) - 0.5) * -15;
+    const rotateY = ((x / rect.width) - 0.5) * 15;
+
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+  });
+});
+
 
   return (
     <section className="dif-section">

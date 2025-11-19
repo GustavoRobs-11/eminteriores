@@ -95,10 +95,11 @@
     border-radius: 25px;
     overflow: hidden;
     margin: 2rem;
+    
 
     /* 🔥 AQUI ESTAVA O PROBLEMA */
     width: clamp(300px, 70vw, 800px);
-    height: clamp(380px, 50vh, 750px);
+    height: clamp(380px, 70vh, 750px);
 
 }
 
@@ -162,7 +163,7 @@
 }
 
 .passo-info p {
-    font-size: clamp(0.8rem, 1.8vw, 2rem);
+    font-size: clamp(0.8rem, 1.8vw, 1.5rem);
 }
 /* ============================
    MOBILE FIX (até 480px)

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "../styles/Comuns/NavBar.css";
 import logo from "../img/Logos/logoAzul.png";
 import { Link } from 'react-router-dom'
@@ -11,6 +11,10 @@ export default function NavBar() {
   const [lastScroll, setLastScroll] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const menuRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  // Detectar scroll e esconder header
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
@@ -28,6 +32,23 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScroll]);
 
+  // Fechar menu ao clicar fora
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
   return (
     <header className={showHeader ? "show" : "hide"}>
       <div className="header-content">
@@ -38,9 +59,9 @@ export default function NavBar() {
           </div>
         </Link>
 
-
-        {/* Botão Mobile com ícone */}
+        {/* Botão Mobile */}
         <button
+          ref={buttonRef}
           className="hamburger"
           onClick={() => setMenuOpen(!menuOpen)}
         >
@@ -48,16 +69,11 @@ export default function NavBar() {
         </button>
 
         {/* Menu */}
-        <nav className={`nav-menu ${menuOpen ? "open" : ""}`}>
-          <Link to='/como-funciona'>
-            <a>Como Funciona</a>
-          </Link>
-          <Link to='/portfolio'>
-            <a>Portfólio</a>
-          </Link>
-          <Link to='/contato'>
-            <a>Contato</a>
-          </Link>
+        <nav ref={menuRef} className={`nav-menu ${menuOpen ? "open" : ""}`}>
+          <Link to='/' className="button-nav">Home</Link>
+          <Link to='/como-funciona' className="button-nav">Como Funciona</Link>
+          <Link to='/portfolio' className="button-nav">Portfólio</Link>
+          <Link to='/contato' className="button-nav">Contato</Link>
         </nav>
 
       </div>

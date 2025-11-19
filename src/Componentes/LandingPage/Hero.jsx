@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/LandingPage/LandingPage.css";
 import heroImg from "../../img/LandingPage/foto-1.png"; // <- ajuste o caminho para sua imagem
+import { Link } from 'react-router-dom'
 
 export default function Hero() {
   return (
@@ -9,8 +10,9 @@ export default function Hero() {
 
       <div className="hero-overlay">
         <div className="hero-card">
+          
           <h1 className="hero-title">Seu lar, um reflexo<br/>do seu viver!</h1>
-          <a href="#portfolio" className="hero-cta">Conheça nosso trabalho</a>
+          <Link to='/como-funciona' className="hero-cta">Conheça nosso trabalho</Link>
         </div>
       </div>
     </section>
