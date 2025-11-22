@@ -56,14 +56,20 @@
 }
 
 .footer-section a:hover {
-  opacity: 0.7;
+  background-color: var(--color2Hover);
+  padding: 10px;
+  border-radius: 12px;
 }
 
 .social-item {
   display: flex;
   align-items: center;
-  gap: 10px;
   margin: 10px 0;
+}
+.social-item a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .icon {
@@ -93,6 +99,8 @@
 
 .dev-by {
   font-weight: 600;
+  text-decoration: none;
+  color: var(--color1);
 }
 
 /* Responsividade */

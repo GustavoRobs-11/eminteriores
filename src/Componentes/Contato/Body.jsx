@@ -1,10 +1,14 @@
 import { StrictMode } from 'react'
-
+import Contato from './section.jsx'
 
 export default function Body() {
     return (
         <>
-            <h1>Contato</h1>
+            <StrictMode>
+
+                <Contato />
+
+            </StrictMode>
         </>
     );
 }

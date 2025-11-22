@@ -1,0 +1,265 @@
+/* =========================================================
+   IMPORTAÇÕES E ESTILO GLOBAL
+   ========================================================= */
+@import url("../../styles/main.css");
+
+body {
+    background-image: url("../../img/ComoFunciona/fundo.png");
+}
+
+/* =========================================================
+   SEÇÃO PRINCIPAL
+   ========================================================= */
+.contato-section {
+    padding: 40px 20px;
+    margin-top: 8vw;
+}
+
+.titulo-contato {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--color2);
+}
+
+.subtitulo-contato {
+    margin-top: -10px;
+    margin-bottom: 30px;
+    color: var(--color2);
+}
+
+/* =========================================================
+   CONTAINER PRINCIPAL (BOX DO FORMULÁRIO)
+   ========================================================= */
+.contato-container {
+    background: var(--color1);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.contato-left {
+    flex: 1.2;
+    width: 50%;
+}
+
+.contato-right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.contato-foto {
+    width: 100%;
+    border-radius: 20px;
+}
+.contato-right :hover{
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+/* =========================================================
+   BLOCOS DE PERGUNTAS (CARD)
+   ========================================================= */
+.card-contato {
+    margin-bottom: 35px; /* espaçamento entre blocos */
+}
+.card-contato label:hover, .buttons-ambientes button:hover{
+    transform: scale(1.07);
+    transition: 0.3s;
+}
+
+.card-contato h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--color2);
+}
+
+/* =========================================================
+   BOTÕES DE AMBIENTES
+   ========================================================= */
+.buttons-ambientes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-ambiente {
+    background: var(--color1);
+    border: 2px solid var(--color2);
+    padding: 8px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+    color: var(--color2);
+}
+
+.btn-ambiente:hover {
+    background: var(--color2);
+    color: var(--color1);
+}
+
+.btn-ambiente.ativo {
+    background: var(--color2);
+    color: var(--color1);
+}
+
+/* =========================================================
+   LISTAS DE CHECKBOX E RADIO
+   ========================================================= */
+.lista-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* mais espaço entre cada item */
+}
+
+/* Cada linha de opção */
+.checkbox-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 3px 0;
+    cursor: pointer;
+}
+
+/* Remove aparência padrão */
+.checkbox-line input[type="checkbox"],
+.checkbox-line input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--color2);
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+/* Selecionado */
+.checkbox-line input[type="checkbox"]:checked,
+.checkbox-line input[type="radio"]:checked {
+    background: var(--color2);
+    border-color: var(--color2);
+}
+
+/* Bolinha branca central */
+.checkbox-line input[type="checkbox"]:checked::after,
+.checkbox-line input[type="radio"]:checked::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--color1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-line span {
+    font-size: 15px;
+    color: var(--color2);
+    padding: 5px 0px;
+}
+
+/* =========================================================
+   DOIS CARDS LADO A LADO
+   ========================================================= */
+.linha-dupla {
+    display: flex;
+    gap: 10px;
+}
+
+/* =========================================================
+   BOTÃO DO WHATSAPP
+   ========================================================= */
+.btn-whatsapp {
+    margin-top: 25px;
+    background: var(--color2);
+    color: var(--color1);
+    font-size: 18px;
+    padding: 12px 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-whatsapp:hover {
+    background: var(--color2Hover);
+}
+
+/* =========================================================
+   🔥 RESPONSIVIDADE
+   ========================================================= */
+
+/* --- Telas entre 1024px e 768px --- */
+@media (max-width: 1024px) {
+    .contato-container {
+        flex-direction: column-reverse;
+        padding: 30px;
+    }
+
+    .contato-left, 
+    .contato-right {
+        width: 100%;
+    }
+
+    .linha-dupla {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+/* --- Tablets e telas médias --- */
+@media (max-width: 768px) {
+    .titulo-contato {
+        font-size: 34px;
+    }
+
+    .subtitulo-contato {
+        font-size: 16px;
+    }
+
+    .btn-ambiente {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* --- Celulares --- */
+@media (max-width: 480px) {
+    .contato-container {
+        padding: 20px;
+    }
+
+    .titulo-contato {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .subtitulo-contato {
+        text-align: center;
+    }
+
+    .btn-whatsapp {
+        width: 100%;
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    .checkbox-line span {
+        font-size: 14px;
+    }
+}

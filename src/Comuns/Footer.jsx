@@ -21,28 +21,40 @@ export default function Footer() {
           {/* NAVEGAÇÃO */}
           <div className="footer-section">
             <h3>Navegação</h3>
-            <a href="#como-funciona">Como Funciona</a>
-            <a href="#portfolio">Portfólio</a>
-            <a href="#contato">Contato</a>
+            <Link to='/' className="button-nav">Home</Link>
+            <Link to='/como-funciona' className="button-nav">Como Funciona</Link>
+            <Link to='/portfolio' className="button-nav">Portfólio</Link>
+            <Link to='/contato' className="button-nav">Contato</Link>
           </div>
 
           {/* REDES SOCIAIS */}
           <div className="footer-section">
             <h3>Redes</h3>
-
             <div className="social-item">
-              <FaInstagram className="icon" />
-              <a href="#">Instagram</a>
+              <a href="https://www.instagram.com/e.m.interiores/"
+                target="_blank"
+                rel="noopener noreferrer">
+                <FaInstagram className="icon" />
+                Instagram
+              </a>
             </div>
 
             <div className="social-item">
-              <FaWhatsapp className="icon" />
-              <a href="#">WhatsApp</a>
+              <a href="https://wa.me/5511961640586"
+                target="_blank"
+                rel="noopener noreferrer">
+                <FaWhatsapp className="icon" />
+                WhatsApp
+              </a>
             </div>
 
             <div className="social-item">
-              <FaTiktok className="icon" />
-              <a href="#">Tiktok</a>
+              <a href="https://www.tiktok.com/@e.m.interiores"
+                target="_blank"
+                rel="noopener noreferrer">
+                <FaTiktok className="icon" />
+                Tiktok
+              </a>
             </div>
           </div>
         </div>
@@ -56,7 +68,11 @@ export default function Footer() {
           <p>2025 – Eduarda Silva Prado. Todos os direitos reservados.</p>
         </div>
 
-        <p className="dev-by">Desenvolvido por GustaWebsites</p>
+        <a href="https://gustawebsites.com.br/"
+         className="dev-by "
+         target="_blank"
+        rel="noopener noreferrer"
+         >Desenvolvido por GustaWebsites</a>
       </div>
     </footer>
   );
