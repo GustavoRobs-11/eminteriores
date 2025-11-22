@@ -67,7 +67,7 @@ export default function Contato() {
     // Enviar para WhatsApp
     const enviarWhatsApp = () => {
 
-        const numero = "5511988709600"; // <-- TROQUE PELO NÚMERO DA SUA EMPRESA
+        const numero = "5511961640586";
 
         const mensagem = `
 *Olá Eduarda* 
