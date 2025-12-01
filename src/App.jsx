@@ -12,7 +12,7 @@ import LandingPage from "./pages/LandingPage";
 
 export default function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/">
             <NavBar />
             <Routes>
                 <Route path="/" element={<LandingPage />} />
