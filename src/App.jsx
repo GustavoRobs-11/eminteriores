@@ -1,6 +1,7 @@
 // App.jsx
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
+
 
 // Páginas
 import Footer from "./Comuns/Footer";
@@ -12,7 +13,7 @@ import LandingPage from "./pages/LandingPage";
 
 export default function App() {
     return (
-        <BrowserRouter basename="/">
+        <HashRouter basename="/">
             <NavBar />
             <Routes>
                 <Route path="/" element={<LandingPage />} />
@@ -29,6 +30,6 @@ export default function App() {
 
             </Routes>
             <Footer />
-        </BrowserRouter>
+        </HashRouter>
     );
 }

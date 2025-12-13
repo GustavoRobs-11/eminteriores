@@ -1,0 +1,148 @@
+@import url("../../styles/main.css");
+
+/* ===============================
+   CONTAINER DO PORTFÓLIO
+================================ */
+.portfolio-container {
+    padding: 10rem 3% 5% 3%;
+    background-image: url("../../img/Portfolio/fundo.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--color2);
+    margin-bottom: 30px;
+}
+
+.section-block {
+    margin-bottom: 55px;
+}
+
+/* ===============================
+   SLIDER BASE
+================================ */
+.portfolio-slider {
+    width: 100%;
+}
+
+.portfolio-slider .slick-slide {
+    padding: 0 10px;
+}
+
+.portfolio-slider .slick-list {
+    margin: 0 -10px;
+}
+
+/* ===============================
+   SETAS DO SLIDER
+================================ */
+.portfolio-slider .slick-prev,
+.portfolio-slider .slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+}
+
+.portfolio-slider .slick-prev {
+    left: -30px;
+}
+
+.portfolio-slider .slick-next {
+    right: -30px;
+}
+
+.portfolio-slider .slick-prev:before,
+.portfolio-slider .slick-next:before {
+    color: var(--color2) !important;
+    font-size: 30px !important;
+}
+
+/* ===============================
+   DOTS (PAGINAÇÃO)
+================================ */
+.portfolio-slider .slick-dots li button:before {
+    color: var(--color2);
+    opacity: 0.4;
+}
+
+.portfolio-slider .slick-dots li.slick-active button:before {
+    color: var(--color2);
+    opacity: 1;
+}
+
+/* ===============================
+   RESPONSIVO — TABLET
+================================ */
+@media (max-width: 1024px) {
+
+    .portfolio-container {
+        padding: 8rem 4% 4% 4%;
+    }
+
+    .portfolio-slider .slick-slide {
+        padding: 0 8px;
+    }
+
+    .portfolio-slider .slick-list {
+        margin: 0 -8px;
+    }
+
+    .portfolio-slider .slick-prev:before,
+    .portfolio-slider .slick-next:before {
+        font-size: 26px !important;
+    }
+}
+
+/* ===============================
+   RESPONSIVO — MOBILE
+================================ */
+@media (max-width: 600px) {
+
+    .portfolio-container {
+        padding: 7rem 4% 4% 4%;
+    }
+
+    .portfolio-title {
+        font-size: 2rem;
+    }
+
+    .portfolio-slider {
+        padding: 0 5px;
+    }
+
+    .portfolio-slider .slick-slide {
+        padding: 0 5px;
+    }
+
+    .portfolio-slider .slick-list {
+        margin: 0 -5px;
+    }
+
+    .portfolio-slider .slick-prev:before,
+    .portfolio-slider .slick-next:before {
+        font-size: 22px !important;
+    }
+
+    .portfolio-slider .slick-prev {
+        left: -20px;
+    }
+
+    .portfolio-slider .slick-next {
+        right: -20px;
+    }
+
+
+    /* Opcional: esconder setas no mobile (swipe fica melhor) */
+    /*
+    .portfolio-slider .slick-prev,
+    .portfolio-slider .slick-next {
+        display: none !important;
+    }
+    */
+}
