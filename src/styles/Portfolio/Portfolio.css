@@ -3,12 +3,17 @@
 /* ===============================
    CONTAINER DO PORTFÓLIO
 ================================ */
+.portfolio-gallery{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 .portfolio-container {
-    padding: 10rem 3% 5% 3%;
+    padding: 10rem 3% 0% 3%;
     background-image: url("../../img/Portfolio/fundo.png");
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-height: 80vh;
     position: relative;
     z-index: 1;
 }
@@ -17,18 +22,119 @@
     font-size: 2.4rem;
     font-weight: 700;
     color: var(--color2);
-    margin-bottom: 30px;
+   
 }
 
 .section-block {
-    margin-bottom: 55px;
+    margin-bottom: 10px;
 }
+
+
+
+/* ===============================
+   BOTÕES DE AMBIENTE
+================================ */
+.ambientes-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 3rem ;
+    margin-top: 3rem;
+
+}
+
+.ambiente-btn {
+    position: relative;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--color2);
+    background: var(--color1);
+    color: var(--color3);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+
+    z-index: 0;            /* base do botão */
+    isolation: isolate;   /* 🔥 controla camadas internas */
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.25s ease,
+        box-shadow 0.3s ease;
+}
+
+/* HOVER */
+.ambiente-btn:hover {
+    background: var(--color2);
+    color: var(--color1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ===============================
+   EFEITO (ATRÁS DO TEXTO)
+================================ */
+.ambiente-btn::before {
+    content: "";
+    position: absolute;
+    inset: -50%;
+    z-index: -1; /* 🔥 fica atrás do texto */
+    background: radial-gradient(
+        circle,
+        var(--color1) 0%,
+        var(--color2) 60%,
+        transparent 75%
+    );
+    opacity: 0;
+    transform: scale(0.2);
+    transition:
+        transform 0.45s ease-out,
+        opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* ===============================
+   ATIVO — ANIMA DO MEIO PRA FORA
+================================ */
+.ambiente-btn.ativo {
+    background: var(--color2);
+    color: var(--color2)!important;
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* animação visível */
+.ambiente-btn.ativo::before {
+    opacity: 1;
+    transform: scale(1.4);
+}
+
+/* garante que hover não sobrescreva ativo */
+.ambiente-btn.ativo:hover {
+    background: var(--color2);
+    color: var(--color1);
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 600px) {
+    .ambiente-btn {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+
 
 /* ===============================
    SLIDER BASE
 ================================ */
 .portfolio-slider {
-    width: 100%;
+    width: 90%;
+    margin-bottom: 15rem;
 }
 
 .portfolio-slider .slick-slide {
@@ -37,6 +143,30 @@
 
 .portfolio-slider .slick-list {
     margin: 0 -10px;
+}
+
+/* evita slide forçar altura */
+.portfolio-slider .slick-slide > div {
+    display: flex;
+    justify-content: center;
+}
+
+/* ===============================
+   CARD / IMAGEM (AGORA FUNCIONA)
+================================ */
+.portfolio-card {
+    width: 100%;
+    max-width: 380px;              /* impede ficar gigante */
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(15, 23, 42, 0.6);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: auto;                 /* DESKTOP – pequeno */
+    object-fit: cover;
+    display: block;
 }
 
 /* ===============================
@@ -93,6 +223,14 @@
         margin: 0 -8px;
     }
 
+    .portfolio-card {
+        max-width: 260px;
+    }
+
+    .portfolio-card img {
+        height: 315px;
+    }
+
     .portfolio-slider .slick-prev:before,
     .portfolio-slider .slick-next:before {
         font-size: 26px !important;
@@ -124,6 +262,14 @@
         margin: 0 -5px;
     }
 
+    .portfolio-card {
+        max-width: 220px;
+    }
+
+    .portfolio-card img {
+        height: 300px;              /* MOBILE – miniatura */
+    }
+
     .portfolio-slider .slick-prev:before,
     .portfolio-slider .slick-next:before {
         font-size: 22px !important;
@@ -137,12 +283,5 @@
         right: -20px;
     }
 
-
-    /* Opcional: esconder setas no mobile (swipe fica melhor) */
-    /*
-    .portfolio-slider .slick-prev,
-    .portfolio-slider .slick-next {
-        display: none !important;
-    }
-    */
+   
 }

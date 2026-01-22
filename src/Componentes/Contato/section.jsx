@@ -31,9 +31,8 @@ export default function Contato() {
     ];
 
     const urgencia = [
-        "Não tenho pressa e prefiro fazer com calma",
         "Tenho urgência para iniciar a obra",
-        "Já iniciei a obra",
+        "Não tenho urgência para iniciar a obra",
     ];
 
     // ESTADOS
@@ -41,6 +40,8 @@ export default function Contato() {
     const [reformasSelecionadas, setReformasSelecionadas] = useState([]);
     const [statusSelecionado, setStatusSelecionado] = useState("");
     const [urgenciasSelecionadas, setUrgenciasSelecionadas] = useState([]);
+    const [urgenciaSelecionada, setUrgenciaSelecionada] = useState('')
+
 
 
     // Toggle checkbox
@@ -127,7 +128,9 @@ ${urgenciasSelecionadas.length > 0 ? urgenciasSelecionadas.join(", ") : "Nenhum 
                     {/* Reformas */}
                     <div className="card-contato">
                         <h2>O que você pensa em reformar?</h2>
+
                         <div className="lista-opcoes">
+                            <span className="observacao-card">Você pode selecionar mais de uma opção.</span>
                             {reformas.map((item) => (
                                 <label key={item} className="checkbox-line">
                                     <input
@@ -163,20 +166,27 @@ ${urgenciasSelecionadas.length > 0 ? urgenciasSelecionadas.join(", ") : "Nenhum 
 
                         {/* Urgência */}
                         <div className="card-contato">
-                            <h2>Qual a sua urgencia para o projeto?</h2>
+                            <h2>Qual a sua urgência para o projeto?</h2>
+
                             {urgencia.map((item) => (
                                 <label key={item} className="checkbox-line">
                                     <input
-                                        type="checkbox"
-                                        checked={urgenciasSelecionadas.includes(item)}
-                                        onChange={() => toggleUrgencia(item)}
+                                        type="radio"
+                                        name="urgencia"
+                                        value={item}
+                                        checked={urgenciaSelecionada === item}
+                                        onChange={() => setUrgenciaSelecionada(item)}
                                     />
-
                                     <span>{item}</span>
                                 </label>
                             ))}
+
                             {/* BOTÃO WHATSAPP */}
-                            <button className="btn-whatsapp" onClick={enviarWhatsApp}>
+                            <button
+                                className="btn-whatsapp"
+                                onClick={enviarWhatsApp}
+                                disabled={!urgenciaSelecionada}
+                            >
                                 <FaWhatsapp size={22} />
                                 Enviar pelo WhatsApp
                             </button>

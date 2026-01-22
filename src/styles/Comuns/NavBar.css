@@ -112,6 +112,10 @@ header.hide {
   padding: 5px;
   z-index: 99999;
 }
+.hamburger svg {
+  pointer-events: none;
+}
+
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
@@ -160,6 +164,7 @@ header.hide {
   .hamburger {
     display: block;
   }
+  
 
   /* Tamanho dos links mobile */
   .nav-menu a {

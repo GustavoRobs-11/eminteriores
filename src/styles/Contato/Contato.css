@@ -68,6 +68,12 @@ body {
    ========================================================= */
 .card-contato {
     margin-bottom: 35px; /* espaçamento entre blocos */
+    padding: 10px;
+}
+.observacao-card{
+    font-size: small;
+    color: var(--color2);
+    padding-bottom: 1rem;
 }
 .card-contato label:hover, .buttons-ambientes button:hover{
     transform: scale(1.07);
@@ -133,8 +139,12 @@ body {
 .checkbox-line input[type="radio"] {
     appearance: none;
     -webkit-appearance: none;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    aspect-ratio: 1 / 1;
+    
     border: 2px solid var(--color2);
     border-radius: 50%;
     background: white;
