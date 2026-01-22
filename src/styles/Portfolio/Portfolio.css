@@ -9,8 +9,8 @@
     flex-direction: column;
 }
 .portfolio-container {
-    padding: 10rem 3% 0% 3%;
-    background-image: url("../../img/Portfolio/fundo.png");
+    padding: 10rem 10% 0% 10%;
+    background-image: url("../../img/fundo.jpg");
     background-size: cover;
     background-position: center;
     min-height: 80vh;
@@ -36,11 +36,9 @@
 ================================ */
 .ambientes-buttons {
     display: flex;
-    gap: 12px;
+    gap: 3rem;
     flex-wrap: wrap;
-    margin-bottom: 3rem ;
-    margin-top: 3rem;
-
+    margin: 3rem 0;
 }
 
 .ambiente-btn {
@@ -53,10 +51,6 @@
     font-size: 0.95rem;
     font-weight: 500;
     cursor: pointer;
-    overflow: hidden;
-
-    z-index: 0;            /* base do botão */
-    isolation: isolate;   /* 🔥 controla camadas internas */
 
     transition:
         background 0.3s ease,
@@ -64,8 +58,26 @@
         transform 0.25s ease,
         box-shadow 0.3s ease;
 }
+.ambiente-btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
 
-/* HOVER */
+    background: linear-gradient(
+        90deg,
+        var(--color2),
+       
+        var(--color2)
+    );
+
+    transform: translateX(-50%);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
 .ambiente-btn:hover {
     background: var(--color2);
     color: var(--color1);
@@ -73,49 +85,21 @@
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-/* ===============================
-   EFEITO (ATRÁS DO TEXTO)
-================================ */
-.ambiente-btn::before {
-    content: "";
-    position: absolute;
-    inset: -50%;
-    z-index: -1; /* 🔥 fica atrás do texto */
-    background: radial-gradient(
-        circle,
-        var(--color1) 0%,
-        var(--color2) 60%,
-        transparent 75%
-    );
-    opacity: 0;
-    transform: scale(0.2);
-    transition:
-        transform 0.45s ease-out,
-        opacity 0.3s ease;
-    pointer-events: none;
+.ambiente-btn:hover::after {
+    width: 50%;
 }
 
-/* ===============================
-   ATIVO — ANIMA DO MEIO PRA FORA
-================================ */
 .ambiente-btn.ativo {
     background: var(--color2);
-    color: var(--color2)!important;
+    color: var(--color1);
     transform: scale(1.08);
     box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 
-/* animação visível */
-.ambiente-btn.ativo::before {
-    opacity: 1;
-    transform: scale(1.4);
+.ambiente-btn.ativo::after {
+    width: 100%;
 }
 
-/* garante que hover não sobrescreva ativo */
-.ambiente-btn.ativo:hover {
-    background: var(--color2);
-    color: var(--color1);
-}
 
 /* ===============================
    MOBILE
@@ -126,6 +110,7 @@
         font-size: 0.85rem;
     }
 }
+
 
 
 
