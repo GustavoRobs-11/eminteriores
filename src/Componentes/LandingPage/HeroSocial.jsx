@@ -19,13 +19,16 @@ export default function HeroSocial() {
 
       <div className="hero-social-content">
         <div className="container-quemsou">
-          <p>Sou apaixonada por transformar ambientes em espaços que contam histórias. Desde as primeiras brincadeiras com Lego até os projetos atuais, a criatividade sempre fez parte da minha vida.<br></br>Busco unir sensibilidade, estudo e atenção aos detalhes para criar ambientes que realmente façam sentido para quem vai vivê-los.
+          <p>Sou apaixonada por transformar ambientes em espaços que contam histórias. Desde as primeiras brincadeiras com Lego até os projetos atuais, a criatividade sempre fez parte da minha vida.<br></br><br></br>Busco unir sensibilidade, estudo e atenção aos detalhes para criar ambientes que realmente façam sentido para quem vai vivê-los.
             Explorar novos lugares, aprender sempre e estar com minha família (e meus pets!) me inspira diariamente.
             Independentemente do tamanho do projeto, meu objetivo é criar espaços acolhedores, funcionais e cheios de personalidade.
           </p>
         </div>
-        <Link to='/portfolio' className="hero-social-btn">Portfolio</Link>
-        <Link to='/como-funciona' className="hero-social-btn">Como Trabalhamos</Link>
+        <div className="hero-social-btns">
+          <Link to='/portfolio' className="hero-social-btn">Portfolio</Link>
+          <Link to='/como-funciona' className="hero-social-btn">Como Trabalhamos</Link>
+        </div>
+
         <div className="hero-social-icons">
           <a
             href="https://www.instagram.com/e.m.interiores/"
