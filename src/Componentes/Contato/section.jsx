@@ -161,16 +161,22 @@ Contato pelo site EmInteriores.com.br
                     type="radio"
                     name="status"
                     checked={statusSelecionado === item}
-                    onChange={() => {
-                      setStatusSelecionado(item);
-                      setStep(4);
-                    }}
+                    onChange={() => setStatusSelecionado(item)}
                   />
                   <span>{item}</span>
                 </label>
               ))}
+
+              <button
+                className="btn-avancar"
+                disabled={!statusSelecionado}
+                onClick={() => setStep(4)}
+              >
+                Continuar
+              </button>
             </div>
           )}
+
 
           {/* ETAPA 4 */}
           {step === 4 && (
@@ -183,16 +189,22 @@ Contato pelo site EmInteriores.com.br
                     type="radio"
                     name="urgencia"
                     checked={urgenciaSelecionada === item}
-                    onChange={() => {
-                      setUrgenciaSelecionada(item);
-                      setStep(5);
-                    }}
+                    onChange={() => setUrgenciaSelecionada(item)}
                   />
                   <span>{item}</span>
                 </label>
               ))}
+
+              <button
+                className="btn-avancar"
+                disabled={!urgenciaSelecionada}
+                onClick={() => setStep(5)}
+              >
+                Continuar
+              </button>
             </div>
           )}
+
 
           {/* ETAPA 5 */}
           {step === 5 && (

@@ -32,7 +32,7 @@ body {
    CONTAINER PRINCIPAL
    ========================================================= */
 .contato-container {
-    background: var(--color1);
+   
     border-radius: 20px;
     padding: 40px;
     display: flex;
@@ -259,7 +259,7 @@ body {
 }
 
 .contato-foto {
-    width: 100%;
+    width: clamp(80%, 1vw, 60%);
     border-radius: 20px;
 }
 
