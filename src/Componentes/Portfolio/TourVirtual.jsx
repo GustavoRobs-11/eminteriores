@@ -12,19 +12,21 @@ import imagem8 from "../../img/Portfolio/TourVirtual/image8.png";
 import imagem9 from "../../img/Portfolio/TourVirtual/image9.png";
 import imagem10 from "../../img/Portfolio/TourVirtual/image10.png";
 import imagem11 from "../../img/Portfolio/TourVirtual/image11.png";
+import imagem12 from "../../img/Portfolio/TourVirtual/image12.png";
 
 const tours = [
-  { id: 1, cliente: "Odair Brito", imagem: imagem1, link: "https://tour.meupasseiovirtual.com/view/4NQ91zLqbCL" },
-  { id: 2, cliente: "Carolina", imagem: imagem2, link: "https://tour.meupasseiovirtual.com/view/abi5ok3TVGp" },
-  { id: 3, cliente: "Gabriel e Monalisa", imagem: imagem3, link: "https://tour.meupasseiovirtual.com/view/bmwpLvyyAU1" },
-  { id: 4, cliente: "João Gazar", imagem: imagem4, link: "https://tour.meupasseiovirtual.com/view/wDYnWVZl7uy" },
-  { id: 5, cliente: "JM Móveis", imagem: imagem5, link: "https://tour.meupasseiovirtual.com/view/QBFaiUyJo50" },
-  { id: 6, cliente: "Pedro e Emilly", imagem: imagem6, link: "https://tour.meupasseiovirtual.com/view/0TnJmnHfmUS" },
-  { id: 7, cliente: "Filipe e Nicoly", imagem: imagem7, link: "https://tour.meupasseiovirtual.com/view/wDITc9bGCAZ" },
-  { id: 8, cliente: "Sylvio Lima", imagem: imagem8, link: "https://tour.meupasseiovirtual.com/view/Apr7KZUulJi" },
-  { id: 9, cliente: "Izabela Wicher", imagem: imagem9, link: "https://tour.meupasseiovirtual.com/view/1gPlvbAoihb" },
-  { id: 10, cliente: "Apartamento Quiteria", imagem: imagem10, link: "https://tour.meupasseiovirtual.com/view/SfruCn5manb" },
-  { id: 11, cliente: "Apartamento Kaline", imagem: imagem11, link: "https://tour.meupasseiovirtual.com/view/aQ4i0UiiBrm" },
+  { id: 12, cliente: "Apto Varanda", imagem: imagem12, link: "https://meutour360.com/tour-360/apartamento-varanda" },
+  { id: 1, cliente: "Apto 223", imagem: imagem1, link: "https://tour.meupasseiovirtual.com/view/4NQ91zLqbCL" },
+  { id: 2, cliente: "Apto 231", imagem: imagem2, link: "https://tour.meupasseiovirtual.com/view/abi5ok3TVGp" },
+  { id: 3, cliente: "Apto G&M", imagem: imagem3, link: "https://tour.meupasseiovirtual.com/view/bmwpLvyyAU1" },
+  { id: 4, cliente: "Casa J&G", imagem: imagem4, link: "https://tour.meupasseiovirtual.com/view/wDYnWVZl7uy" },
+  { id: 5, cliente: "Marcenaria JM Móveis", imagem: imagem5, link: "https://tour.meupasseiovirtual.com/view/QBFaiUyJo50" },
+  { id: 6, cliente: "Apto 182", imagem: imagem6, link: "https://tour.meupasseiovirtual.com/view/0TnJmnHfmUS" },
+  { id: 7, cliente: "Apto 91", imagem: imagem7, link: "https://tour.meupasseiovirtual.com/view/wDITc9bGCAZ" },
+  { id: 8, cliente: "Apto 406", imagem: imagem8, link: "https://tour.meupasseiovirtual.com/view/Apr7KZUulJi" },
+  { id: 9, cliente: "Apto 86B", imagem: imagem9, link: "https://tour.meupasseiovirtual.com/view/1gPlvbAoihb" },
+  { id: 10, cliente: "Apto 34", imagem: imagem10, link: "https://tour.meupasseiovirtual.com/view/SfruCn5manb" },
+  { id: 11, cliente: "Apto 91-2", imagem: imagem11, link: "https://tour.meupasseiovirtual.com/view/aQ4i0UiiBrm" },
 ];
 
 export default function TourVirtual() {

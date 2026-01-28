@@ -2,34 +2,35 @@
 import React from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 
-
-// Páginas
+// Componentes
 import Footer from "./Comuns/Footer";
 import NavBar from "./Comuns/NavBar";
+import ScrollToTop from "./Comuns/ScrollToTop";
+
+// Páginas
 import Portfolio from "./Pages/Portfolio";
 import ComoFunciona from "./Pages/ComoFunciona";
 import Contato from "./pages/Contato";
 import LandingPage from "./pages/LandingPage";
 
 export default function App() {
-    return (
-        <HashRouter basename="/">
-            <NavBar />
-            <Routes>
-                <Route path="/" element={<LandingPage />} />
+  return (
+    <HashRouter basename="/">
+      <ScrollToTop />
 
-                <Route path="/portfolio" element={<Portfolio />} />
+      <NavBar />
 
-                <Route path="/como-funciona" element={<ComoFunciona />} />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/como-funciona" element={<ComoFunciona />} />
+        <Route path="/contato" element={<Contato />} />
 
-                <Route path="/contato" element={<Contato />} />
+        {/* Página 404 */}
+        <Route path="*" element={<h1>Página não encontrada</h1>} />
+      </Routes>
 
-
-                {/* Página 404 opcional */}
-                <Route path="*" element={<h1>Página não encontrada</h1>} />
-
-            </Routes>
-            <Footer />
-        </HashRouter>
-    );
+      <Footer />
+    </HashRouter>
+  );
 }
