@@ -12,6 +12,7 @@ import Portfolio from "./Pages/Portfolio";
 import ComoFunciona from "./Pages/ComoFunciona";
 import Contato from "./pages/Contato";
 import LandingPage from "./pages/LandingPage";
+import LinkBridge from "./pages/LinkBridge";
 
 export default function App() {
   return (
@@ -21,10 +22,11 @@ export default function App() {
       <NavBar />
 
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<LinkBridge />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/como-funciona" element={<ComoFunciona />} />
         <Route path="/contato" element={<Contato />} />
+        <Route path="/home" element={<LandingPage />} />
 
         {/* Página 404 */}
         <Route path="*" element={<h1>Página não encontrada</h1>} />

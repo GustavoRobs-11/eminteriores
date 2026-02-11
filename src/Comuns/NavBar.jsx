@@ -1,12 +1,15 @@
 import { useEffect, useState, useRef } from "react";
 import "../styles/Comuns/NavBar.css";
 import logo from "../img/Logos/logoAzul.png";
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from "react-router-dom";
+
+
 
 // Ícones
 import { HiMenu, HiX } from "react-icons/hi";
 
 export default function NavBar() {
+  const location = useLocation();
   const [showHeader, setShowHeader] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,12 +51,16 @@ export default function NavBar() {
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
+  if (location.pathname === "/") {
+  return null;
+}
+
 
   return (
     <header className={showHeader ? "show" : "hide"}>
       <div className="header-content">
 
-        <Link to='/'>
+        <Link to='/home'>
           <div className="logo-area">
             <img src={logo} alt="Logo" className="logo" />
           </div>
@@ -70,7 +77,7 @@ export default function NavBar() {
 
         {/* Menu */}
         <nav ref={menuRef} className={`nav-menu ${menuOpen ? "open" : ""}`}>
-          <Link to='/' className="button-nav">Home</Link>
+          <Link to='/home' className="button-nav">Home</Link>
           <Link to='/como-funciona' className="button-nav">Como Funciona</Link>
           <Link to='/portfolio' className="button-nav">Portfólio</Link>
           <Link to='/contato' className="button-nav">Contato</Link>

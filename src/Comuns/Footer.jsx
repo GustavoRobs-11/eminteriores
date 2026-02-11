@@ -1,10 +1,15 @@
 import "../styles/Comuns/Footer.css";
 import logo from "../img/Logos/logoBranca.png"; // coloque sua logo branca aqui
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from "react-router-dom";
 
 import { FaInstagram, FaWhatsapp, FaTiktok, FaRegCopyright } from "react-icons/fa";
 
 export default function Footer() {
+  const location = useLocation();
+   if (location.pathname === "/") {
+  return null;
+}
+
   return (
     <footer className="footer">
       <div className="footer-top">

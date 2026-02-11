@@ -1,13 +1,13 @@
 import { StrictMode } from 'react'
-import ContainerPassos from './ContainerPassos'
-import WhatsAppButton from '../../Comuns/wpp'
+import LinkBridge from './section.jsx'
 
 export default function Body() {
     return (
         <>
             <StrictMode>
-                <ContainerPassos />
-                <WhatsAppButton/>
+
+                <LinkBridge />
+
             </StrictMode>
         </>
     );
